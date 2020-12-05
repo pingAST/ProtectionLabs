@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71E91DAC-2931-49EE-9983-32F9DA29B050}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProtectionLabs</RootNamespace>
+    <AssemblyName>ProtectionLabs</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Eneter.Messaging.Framework, Version=8.0.7.0, Culture=neutral, PublicKeyToken=b85852a6d7b5cd07, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eneter.Messaging.Framework.8.0.7\lib\net472\Eneter.Messaging.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Eneter.SecureRemotePassword, Version=1.0.3.0, Culture=neutral, PublicKeyToken=fabf3b8af0af65dc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eneter.SecureRemotePassword.1.0.3\lib\net45\Eneter.SecureRemotePassword.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lab1\CaesarCipher.cs" />
+    <Compile Include="lab1\FormCeaserCiper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lab1\FormCeaserCiper.Designer.cs">
+      <DependentUpon>FormCeaserCiper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lab1\FormFreqLetters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lab1\FormFreqLetters.Designer.cs">
+      <DependentUpon>FormFreqLetters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lab1\FrequencyAnalys.cs" />
+    <Compile Include="lab2\DiffieHellman.cs" />
+    <Compile Include="lab2\FormDiffeHelman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lab2\FormDiffeHelman.Designer.cs">
+      <DependentUpon>FormDiffeHelman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lab3\FormRSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lab3\FormRSA.Designer.cs">
+      <DependentUpon>FormRSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lab4\FormSRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lab4\FormSRP.designer.cs">
+      <DependentUpon>FormSRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lab1\FormCeaserCiper.resx">
+      <DependentUpon>FormCeaserCiper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lab1\FormFreqLetters.resx">
+      <DependentUpon>FormFreqLetters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lab2\FormDiffeHelman.resx">
+      <DependentUpon>FormDiffeHelman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lab3\FormRSA.resx">
+      <DependentUpon>FormRSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lab4\FormSRP.resx">
+      <DependentUpon>FormSRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FolderBottomPanel_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lab1\VoinaAndMir\voina_i_mir.txt" />
+    <Content Include="lab1\VoinaAndMir\voina_i_mir_part.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
